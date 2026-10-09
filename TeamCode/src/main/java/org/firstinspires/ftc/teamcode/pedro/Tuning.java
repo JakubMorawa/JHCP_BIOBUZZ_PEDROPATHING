@@ -1,5 +1,21 @@
 package org.firstinspires.ftc.teamcode.pedro;
 
+import com.pedropathing.tuning.Tuner;
+import com.pedropathing.tuning.Procedure;
+
+import org.firstinspires.ftc.teamcode.pedro.procedures.MecanumTuner;
+import org.firstinspires.ftc.teamcode.pedro.procedures.TwoWheelTuner;
+
 public class Tuning {
-    // Tuners go here
+    
+    @Tuner
+    public static Procedure mecanumTuner() {
+        return new MecanumTuner();
+    }
+    
+    @Tuner
+    public static Procedure twoWheelTuner() {
+        return new TwoWheelTuner();
+    }
 }
+
